@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.baobabhealth</groupId>
+	<artifactId>interoperability</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v25</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.8.4</version>
+		</dependency>
+	</dependencies>
+	<build>
+	<plugins>
+		<plugin>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-sourcegen</artifactId>
+			<version>1.2</version>
+			<executions>
+				<execution>
+					<phase>generate-sources</phase>
+					<goals>
+						<goal>confgen</goal>
+					</goals>
+					<configuration>
+
+						<!-- This is the conformance profile file to use -->
+<!-- 						<profile>${basedir}/src/main/resources/example_ack.xml</profile> -->
+						<profile>${basedir}/src/main/conf/conf.xml</profile>
+
+						<!-- Place generated Java source here -->
+						<targetDirectory>${basedir}/target/generated-sources/confgen</targetDirectory>
+
+						<!-- Generated classes will be placed here -->
+						<packageName>com.foo</packageName>
+
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+	</build>
+</project>
