@@ -1,0 +1,65 @@
+MSH|^~/&|TMM|0417|MOH|9900|200604111720||ZPT^ZP1^ZPT_ZP1|0417_20070705002728|P^T|2.5|||||MWI|UNICODE UTF-8|ENG^ENGLISH^ISO 639|||
+SFT|Taiwan Medical Mission|9.9.9.9|Taiwan Electronic System for management of ART|BinaryID||20070701
+EVN||20060411|||||0417
+PID|1||1^^^^MR^0417^^^^||Phiri^Grace||1980|F|||Area 9, Lilongwe||^^CP~01999999^^PH|||||||||||||||||N|
+NK1|1|Leah Phiri|SIS^Sister^HL70063|||
+PV1|1||^^^0417|||||||||||||||||||||||||||||||||||||||||20070102|
+OBR|1|||xxxx1^ART_Initiation^WHO-VOC||||20070102
+OBX|1|NM|18833-4^Body weight^LN||62|kg^kilogram^ISO+|||||F|||20070102
+OBX|2|NM|K00237^Body height^WHO-VOC||170|cm^centimeter^ISO+|||||F|||20070102
+OBX|3|CE|K00201^ART prior to enrollment^WHO-VOC||K00029^ No prior ARV treatment ^WHO-VOC||||||F|||20070102
+OBX|4|NM|K00222^Anti-retroviral drug adherence percent^WHO-VOC|||%^Percent^ISO+|||||F|||20070102
+OBX|5|ST|K00199^District name where entered into Anti-retroviral therapy^WHO-VOC||Unknown||||||F|||20070102
+OBX|6|ST|KM0016^Initial CD4 cell count^MLW-EDS||||||||F|||20070102
+OBX|7|ST|KM0027^Last ARV number^MLW-EDS||||||||F|||20070102
+OBX|8|TS|K00207^Date anti-retroviral therapy started at original location^WHO-VOC||20070102||||||F|||20070102
+OBX|9|TS|KM0006^Date of patient starting 1st line alternative anti-retroviral therapy^MLW-EDS||||||||F|||20070102
+OBX|10|TS|KM0007^Date of patient starting 2nd line anti-retroviral therapy^MLW-EDS||||||||F|||20070102
+OBX|11|TS|KM0017^Initial CD4 cell counts specimen taken date^MLW-EDS||||||||F|||20070102
+OBX|12|TS|KM0018^Date of patient death from anti-retroviral therapy^MLW-EDS||||||||F|||20070102
+OBX|13|TS|KM0022^Date of HIV positive^MLW-EDS||20061215||||||F|||20070102
+OBX|14|TS|KM0008^Date of patient scheduled to re-visit (appointment date)^MLW-EDS||20070117||||||F|||20070102
+OBX|15|TS|KM0025^Date of patient run out of ART pill^MLW-EDS||20070117||||||F|||20070102
+OBX|16|TS|K00213^Date person dropped from anti-retroviral therapy^WHO-VOC||||||||F|||20070102
+OBX|17|TS|KM0021^Date of patient stopped from anti-retroviral therapy^MLW-EDS||||||||F|||20070102
+OBX|18|TS|KM0023^Date of patient transferred out^MLW-EDS||||||||F|||20070102
+OBX|19|CE|K00203^WHO HIV clinical stage^WHO-VOC||K00035^WHO clinica stage 3^WHO-VOC||||||F|||20070102
+OBX|20|CE|KM0002^Follow-up agreement (Y/N)^MLW-EDS||Y^Agree to follow up^MLW-EDS||||||F|||20070102
+OBX|21|CE|KM0003^Patient's occupation^MLW-EDS||KM0106^Farmer^MLW-EDS||||||F|||20070102
+OBX|22|CE|KM0005^Referral from PMTCT (Y/N)^MLW-EDS||Y^Referred from PMTCT^MLW-EDS||||||F|||20070102
+OBX|23|CE|KM0015^Initial CD4 test (Y/N)^MLW-EDS||U^Unknown^MLW-EDS||||||F|||20070102
+OBX|24|CE|KM0024^Eligible for ART reason with low CD4 cell counts^MLW-EDS||U^Unknown^MLW-EDS||||||F|||20070102
+OBX|25|CE|KM0020^Detail HIV staging condition^MLW-EDS||K00135^Unintentional weight loss less than 10% of body weight in the absence of concurrent illness^MLW-EDS||||||F|||20070102
+OBX|26|CE|KM0020^Detail HIV staging condition^MLW-EDS||A15^ Respiratory tuberculosis, bacteriologically and histologically confirmed^I10||||||F|||20070102
+OBX|27|CE|11449-6^Pregnancy status^LN||KM0083^Missing information^MLW-EDS||||||F|||20070102
+OBX|28|CE|KM0011^Ambulatory status^MLW-EDS||KM0140^able to walk to/at treatment unit and walks at home unaided^MLW-EDS||||||F|||20070102
+OBX|29|CE|KM0012^Work/school status^MLW-EDS||KM0146^engaged in previous work / employment or at scool^MLW-EDS||||||F|||
+20070102
+ORC|RE
+TQ1|||QPM||||20070102||||Instruction: 1 tablet should be taken in the evening.
+RXO|RXM000011^Start - Triomun 40 (15 TAB)^MLW-EDS|15||TAB^Tablet^FDB|||QPM^Pill should be taken in the evening^HL70335||||15|TAB^Tablet^FDB||||||||Kxxxx01|
+OBX|1|NM|KM0013^Number of ART pill count in bottle^MLW-EDS|||TAB^Tablet^FDB|||||F|||20070102
+ORC|RE
+TQ1|||BID||||20070102||||Instruction: 1 tablet should be taken in the morning, 1 tablet should be taken in the evening.
+RXO|RXM000001^Prophylaxis - Cotrim^MLW-EDS|30||TAB^Tablet^FDB|||BID^Pill should be taken in the morning and evening^HL70335||||30| TAB^Tablet^FDB||||||||Kxxxx02|
+OBX|1|NM|KM0013^Number of ART pill count in bottle^MLW-EDS|||TAB^Tablet^FDB|||||F|||20070102
+RXD|1|RXM000011^Start - Triomun 40 (15 TAB)^MLW-EDS|20070102|15|TAB^Tablet^FDB||xxxx|||||1^TAB||||||||||||||||||||||
+RXD|2|RXM000001^Prophylaxis - Cotrim^MLW-EDS|20070102|30|TAB^Tablet^FDB||xxxx|||||2^TAB||||||||||||||||||||||
+PV1|2||^^^0417|||||||||||||||||||||||||||||||||||||||||20070117|
+OBR|1|||xxxx1^ART_Initiation^WHO-VOC||||20070117
+OBX|1|NM|18833-4^Body weight^LN||60|kg^kilogram^ISO+|||||F|||20070117
+OBX|2|NM|K00237^Body height^WHO-VOC||170|cm^centimeter^ISO+|||||F|||20070117
+OBX|3|NM|K00222^Anti-retroviral drug adherence percent^WHO-VOC||93.3|%^Percent^ISO+|||||F|||20070117
+OBX|4|TS|KM0008^Date of patient scheduled to re-visit (appointment date)^MLW-EDS||20070216||||||F|||20070117
+OBX|5|TS|KM0025^Date of patient run out of ART pill^MLW-EDS||20070216||||||F|||20070117
+OBX|6|TS|K00213^Date person dropped from anti-retroviral therapy^WHO-VOC||||||||F|||20070117
+OBX|7|TS|KM0021^Date of patient stopped from anti-retroviral therapy^MLW-EDS||||||||F|||20070117
+OBX|8|TS|KM0023^Date of patient transferred out^MLW-EDS||||||||F|||20070117
+OBX|9|11449-6^Pregnancy status^LN||K00081^Patient is not pregnant^WHO-VOC||||||F|||20070117
+OBX|10|CE|KM0011^Ambulatory status^MLW-EDS||KM0142^Missinhg information^MLW-EDS||||||F|||20070117
+OBX|11|CE|KM0012^Work/school status^MLW-EDS||KM0146^engaged in previous work / employment or at scool^MLW-EDS||||||F|||20070117
+ORC|RE
+TQ1|||BID||||20070117||||Instruction: 1 tablet should be taken in the morning, 1 tablet should be taken in the evening.
+RXO|RXM000012^Continue - Triomun 40 (60 TAB)^MLW-EDS|60||TAB^Tablet^FDB|||BID^Pill should be taken in the morning andevening^HL70335||||60|TAB^Tablet^FDB||||||||Kxxxx01|
+OBX|1|NM|KM0013^Number of ART pill count in bottle^MLW-EDS||4|TAB^Tablet^FDB|||||F|||20070117
+RXD|1|RXM000012^ Continue - Triomun 40 (60 TAB)^MLW-EDS|20070117|60|TAB^Tablet^FDB||xxxx|||||2^TAB||||||||||||||||||||||

@@ -29,22 +29,14 @@
 			<version>1.2</version>
 			<executions>
 				<execution>
-					<phase>generate-sources</phase>
 					<goals>
 						<goal>confgen</goal>
 					</goals>
 					<configuration>
-
-						<!-- This is the conformance profile file to use -->
-<!-- 						<profile>${basedir}/src/main/resources/example_ack.xml</profile> -->
-						<profile>${basedir}/src/main/conf/conf.xml</profile>
-
-						<!-- Place generated Java source here -->
-						<targetDirectory>${basedir}/target/generated-sources/confgen</targetDirectory>
-
-						<!-- Generated classes will be placed here -->
-						<packageName>com.foo</packageName>
-
+						<profile>${project.basedir}/src/main/resources/ZPT_ZP1-ZPT_ZP1-CorrectTable.xml</profile>
+						<targetDirectory>${project.basedir}/src/main/java/</targetDirectory>
+						<packageName>org.baobabhealth.custommodel.v25</packageName>
+<!-- 						<generateDataTypes>SINGLE</generateDataTypes> -->
 					</configuration>
 				</execution>
 			</executions>

@@ -2,16 +2,17 @@ package org.baobabhealth.interoperability.model;
 
 import java.text.SimpleDateFormat;
 
-import ca.uhn.hl7v2.model.DataTypeException;
-import ca.uhn.hl7v2.model.v25.message.BAR_P01;
-import ca.uhn.hl7v2.model.v25.segment.MSH;
+import org.baobabhealth.custommodel.v25.message.ZPT_ZP1;
+import org.baobabhealth.custommodel.v25.segment.MSH;
 
-public class BAR_P01Builder {
+import ca.uhn.hl7v2.model.DataTypeException;
+
+public class ZPT_ZP1Builder {
 
 	private static final String BLAH = "BLAH";
 
-	public BAR_P01 build() throws DataTypeException {
-		BAR_P01 message = new BAR_P01();
+	public ZPT_ZP1 build() throws DataTypeException {
+		ZPT_ZP1 message = new ZPT_ZP1();
 		// Populate the MSH Segment
 		MSH mshSegment = message.getMSH();
 //		1 Field Separator
@@ -51,12 +52,12 @@ public class BAR_P01Builder {
 	}
 
 	private void setMessageType(MSH mshSegment) throws DataTypeException {
-		mshSegment.getMessageType().getMessageCode().setValue("BAR");
-		mshSegment.getMessageType().getTriggerEvent().setValue("P01");
-		mshSegment.getMessageType().getMessageStructure().setValue("BAR_P01");
-//		mshSegment.getMessageType().getMessageCode().setValue("ZPR");
-//		mshSegment.getMessageType().getTriggerEvent().setValue("R01");
-//		mshSegment.getMessageType().getMessageStructure().setValue("ZPR_R01");
+//		mshSegment.getMessageType().getMessageCode().setValue("BAR");
+//		mshSegment.getMessageType().getTriggerEvent().setValue("P01");
+//		mshSegment.getMessageType().getMessageStructure().setValue("BAR_P01");
+		mshSegment.getMessageType().getMessageCode().setValue("ZPT");
+		mshSegment.getMessageType().getTriggerEvent().setValue("ZP1");
+		mshSegment.getMessageType().getMessageStructure().setValue("ZPT_ZP1");
 	}
 
 	private String now() {
