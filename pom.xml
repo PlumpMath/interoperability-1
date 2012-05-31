@@ -15,32 +15,27 @@
 			<artifactId>junit</artifactId>
 			<version>4.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>1.8.4</version>
-		</dependency>
 	</dependencies>
 	<build>
-	<plugins>
-		<plugin>
-			<groupId>ca.uhn.hapi</groupId>
-			<artifactId>hapi-sourcegen</artifactId>
-			<version>1.2</version>
-			<executions>
-				<execution>
-					<goals>
-						<goal>confgen</goal>
-					</goals>
-					<configuration>
-						<profile>${project.basedir}/src/main/resources/ZPT_ZP1-ZPT_ZP1-CorrectTable.xml</profile>
-						<targetDirectory>${project.basedir}/src/main/java/</targetDirectory>
-						<packageName>org.baobabhealth.custommodel.v25</packageName>
-<!-- 						<generateDataTypes>SINGLE</generateDataTypes> -->
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
-	</plugins>
+		<plugins>
+			<plugin>
+				<groupId>ca.uhn.hapi</groupId>
+				<artifactId>hapi-sourcegen</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>confgen</goal>
+						</goals>
+						<configuration>
+							<profile>${project.basedir}/src/main/resources/ZPT_ZP1-conformance-profile-CorrectTable.xml</profile>
+							<targetDirectory>${project.basedir}/src/main/java/</targetDirectory>
+							<packageName>org.baobabhealth.custommodel.v25</packageName>
+							<!-- <generateDataTypes>SINGLE</generateDataTypes> -->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>
