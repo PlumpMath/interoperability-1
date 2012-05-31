@@ -27,11 +27,11 @@ public abstract class BaseOpenmrsData extends BaseOpenmrsObject implements Openm
 	
 	//***** Properties *****
 	
-	protected User creator;
+//	protected User creator;
 	
 	private Date dateCreated;
 	
-	private User changedBy;
+//	private User changedBy;
 	
 	private Date dateChanged;
 	
@@ -39,7 +39,7 @@ public abstract class BaseOpenmrsData extends BaseOpenmrsObject implements Openm
 	
 	private Date dateVoided;
 	
-	private User voidedBy;
+//	private User voidedBy;
 	
 	private String voidReason;
 	
@@ -53,19 +53,19 @@ public abstract class BaseOpenmrsData extends BaseOpenmrsObject implements Openm
 	
 	//***** Property Access *****
 	
-	/**
-	 * @see org.openmrs.Auditable#getCreator()
-	 */
-	public User getCreator() {
-		return creator;
-	}
-	
-	/**
-	 * @see org.openmrs.Auditable#setCreator(org.openmrs.User)
-	 */
-	public void setCreator(User creator) {
-		this.creator = creator;
-	}
+//	/**
+//	 * @see org.openmrs.Auditable#getCreator()
+//	 */
+//	public User getCreator() {
+//		return creator;
+//	}
+//	
+//	/**
+//	 * @see org.openmrs.Auditable#setCreator(org.openmrs.User)
+//	 */
+//	public void setCreator(User creator) {
+//		this.creator = creator;
+//	}
 	
 	/**
 	 * @see org.openmrs.Auditable#getDateCreated()
@@ -81,19 +81,19 @@ public abstract class BaseOpenmrsData extends BaseOpenmrsObject implements Openm
 		this.dateCreated = dateCreated;
 	}
 	
-	/**
-	 * @see org.openmrs.Auditable#getChangedBy()
-	 */
-	public User getChangedBy() {
-		return changedBy;
-	}
-	
-	/**
-	 * @see org.openmrs.Auditable#setChangedBy(org.openmrs.User)
-	 */
-	public void setChangedBy(User changedBy) {
-		this.changedBy = changedBy;
-	}
+//	/**
+//	 * @see org.openmrs.Auditable#getChangedBy()
+//	 */
+//	public User getChangedBy() {
+//		return changedBy;
+//	}
+//	
+//	/**
+//	 * @see org.openmrs.Auditable#setChangedBy(org.openmrs.User)
+//	 */
+//	public void setChangedBy(User changedBy) {
+//		this.changedBy = changedBy;
+//	}
 	
 	/**
 	 * @see org.openmrs.Auditable#getDateChanged()
@@ -148,19 +148,19 @@ public abstract class BaseOpenmrsData extends BaseOpenmrsObject implements Openm
 		this.dateVoided = dateVoided;
 	}
 	
-	/**
-	 * @see org.openmrs.Voidable#getVoidedBy()
-	 */
-	public User getVoidedBy() {
-		return voidedBy;
-	}
-	
-	/**
-	 * @see org.openmrs.Voidable#setVoidedBy(org.openmrs.User)
-	 */
-	public void setVoidedBy(User voidedBy) {
-		this.voidedBy = voidedBy;
-	}
+//	/**
+//	 * @see org.openmrs.Voidable#getVoidedBy()
+//	 */
+//	public User getVoidedBy() {
+//		return voidedBy;
+//	}
+//	
+//	/**
+//	 * @see org.openmrs.Voidable#setVoidedBy(org.openmrs.User)
+//	 */
+//	public void setVoidedBy(User voidedBy) {
+//		this.voidedBy = voidedBy;
+//	}
 	
 	/**
 	 * @see org.openmrs.Voidable#getVoidReason()

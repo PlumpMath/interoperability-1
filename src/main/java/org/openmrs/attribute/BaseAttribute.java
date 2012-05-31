@@ -14,10 +14,10 @@
 package org.openmrs.attribute;
 
 import org.openmrs.BaseOpenmrsData;
-import org.openmrs.customdatatype.CustomDatatypeUtil;
+//import org.openmrs.customdatatype.CustomDatatypeUtil;
 import org.openmrs.customdatatype.Customizable;
-import org.openmrs.customdatatype.InvalidCustomValueException;
-import org.openmrs.customdatatype.NotYetPersistedException;
+//import org.openmrs.customdatatype.InvalidCustomValueException;
+//import org.openmrs.customdatatype.NotYetPersistedException;
 import org.openmrs.util.OpenmrsUtil;
 
 /**
@@ -86,7 +86,8 @@ public abstract class BaseAttribute<AT extends AttributeType, OwningType extends
 	@Override
 	public String getValueReference() {
 		if (valueReference == null)
-			throw new NotYetPersistedException();
+			throw new RuntimeException(); 
+//			throw new NotYetPersistedException();
 		else
 			return valueReference;
 	}
@@ -95,7 +96,7 @@ public abstract class BaseAttribute<AT extends AttributeType, OwningType extends
 	 * @see org.openmrs.customdatatype.SingleCustomValue#setValueReferenceInternal(java.lang.String)
 	 */
 	@Override
-	public void setValueReferenceInternal(String valueReference) throws InvalidCustomValueException {
+	public void setValueReferenceInternal(String valueReference) {//throws InvalidCustomValueException {
 		this.valueReference = valueReference;
 	}
 	
@@ -103,9 +104,9 @@ public abstract class BaseAttribute<AT extends AttributeType, OwningType extends
 	 * @see org.openmrs.attribute.Attribute#getValue()
 	 */
 	@Override
-	public Object getValue() throws InvalidCustomValueException {
-		if (value == null)
-			value = CustomDatatypeUtil.getDatatype(getAttributeType()).fromReferenceString(getValueReference());
+	public Object getValue() {// throws InvalidCustomValueException {
+//		if (value == null)
+//			value = CustomDatatypeUtil.getDatatype(getAttributeType()).fromReferenceString(getValueReference());
 		return value;
 	}
 	
@@ -113,7 +114,7 @@ public abstract class BaseAttribute<AT extends AttributeType, OwningType extends
 	 * @see org.openmrs.attribute.Attribute#setValue(java.lang.Object)
 	 */
 	@Override
-	public <T> void setValue(T typedValue) throws InvalidCustomValueException {
+	public <T> void setValue(T typedValue) {// throws InvalidCustomValueException {
 		dirty = true;
 		value = typedValue;
 	}

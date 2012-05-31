@@ -24,9 +24,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.openmrs.annotation.DisableHandlers;
-import org.openmrs.api.context.Context;
-import org.openmrs.api.handler.VoidHandler;
+//import org.openmrs.annotation.DisableHandlers;
+//import org.openmrs.api.context.Context;
+//import org.openmrs.api.handler.VoidHandler;
 
 /**
  * An Encounter represents one visit or interaction of a patient with a healthcare worker. Every
@@ -63,7 +63,7 @@ public class Encounter extends BaseOpenmrsData implements java.io.Serializable {
 	
 	private Visit visit;
 	
-	@DisableHandlers(handlerTypes = { VoidHandler.class })
+//	@DisableHandlers(handlerTypes = { VoidHandler.class })
 	private Set<EncounterProvider> encounterProviders = new LinkedHashSet<EncounterProvider>();
 	
 	// Constructors
@@ -410,13 +410,14 @@ public class Encounter extends BaseOpenmrsData implements java.io.Serializable {
 	 * @should set existing provider for unknown role
 	 */
 	public void setProvider(Person provider) {
-		EncounterRole unknownRole = Context.getEncounterService().getEncounterRoleByUuid(
-		    EncounterRole.UNKNOWN_ENCOUNTER_ROLE_UUID);
+		EncounterRole unknownRole = null; 
+//				Context.getEncounterService().getEncounterRoleByUuid(
+//		    EncounterRole.UNKNOWN_ENCOUNTER_ROLE_UUID);
 		if (unknownRole == null) {
 			throw new IllegalStateException("No 'Unknown' encounter role with uuid "
 			        + EncounterRole.UNKNOWN_ENCOUNTER_ROLE_UUID + ".");
 		}
-		Collection<Provider> providers = Context.getProviderService().getProvidersByPerson(provider);
+		Collection<Provider> providers = null;//Context.getProviderService().getProvidersByPerson(provider);
 		if (providers == null || providers.isEmpty()) {
 			throw new IllegalArgumentException("No provider with personId " + provider.getPersonId());
 		}
@@ -597,7 +598,7 @@ public class Encounter extends BaseOpenmrsData implements java.io.Serializable {
 		encounterProvider.setEncounterRole(role);
 		encounterProvider.setProvider(provider);
 		encounterProvider.setDateCreated(new Date());
-		encounterProvider.setCreator(Context.getAuthenticatedUser());
+//		encounterProvider.setCreator(Context.getAuthenticatedUser());
 		encounterProviders.add(encounterProvider);
 	}
 	
@@ -621,7 +622,7 @@ public class Encounter extends BaseOpenmrsData implements java.io.Serializable {
 				if (!encounterProvider.getProvider().equals(provider)) {
 					encounterProvider.setVoided(true);
 					encounterProvider.setDateVoided(new Date());
-					encounterProvider.setVoidedBy(Context.getAuthenticatedUser());
+//					encounterProvider.setVoidedBy(Context.getAuthenticatedUser());
 				} else {
 					hasProvider = true;
 				}
@@ -646,7 +647,7 @@ public class Encounter extends BaseOpenmrsData implements java.io.Serializable {
 			if (encounterProvider.getEncounterRole().equals(role) && encounterProvider.getProvider().equals(provider)) {
 				encounterProvider.setVoided(true);
 				encounterProvider.setDateVoided(new Date());
-				encounterProvider.setVoidedBy(Context.getAuthenticatedUser());
+//				encounterProvider.setVoidedBy(Context.getAuthenticatedUser());
 				return;
 			}
 		}

@@ -40,7 +40,7 @@ public interface SingleCustomValue<D extends CustomValueDescriptor> {
 	 * @return the value persisted in a database in a varchar column. Not necessarily human-readable.
 	 * @throws NotYetPersistedException if valueReference hasn't been set by the CustomDatatype yet
 	 */
-	String getValueReference() throws NotYetPersistedException;
+	String getValueReference();// throws NotYetPersistedException;
 	
 	/**
 	 * Directly set the String value that OpenMRS should persist in the database
@@ -50,7 +50,7 @@ public interface SingleCustomValue<D extends CustomValueDescriptor> {
 	 * instead.
 	 * @param valueToPersist
 	 */
-	void setValueReferenceInternal(String valueToPersist) throws InvalidCustomValueException;
+	void setValueReferenceInternal(String valueToPersist);// throws InvalidCustomValueException;
 	
 	/**
 	 * Convenience method to get the typed version of the serializedValue. (This will result in a call
@@ -58,14 +58,14 @@ public interface SingleCustomValue<D extends CustomValueDescriptor> {
 	 * @return typed value, converted from serializedValue by a CustomDatatype
 	 * @throws InvalidCustomValueException 
 	 */
-	Object getValue() throws InvalidCustomValueException;
+	Object getValue();// throws InvalidCustomValueException;
 	
 	/**
 	 * Sets the typed value. (This will result in a call to {@link CustomDatatype#toReferenceString(Object)}
 	 * @param typedValue
 	 * @throws InvalidCustomValueException
 	 */
-	<T> void setValue(T typedValue) throws InvalidCustomValueException;
+	<T> void setValue(T typedValue);// throws InvalidCustomValueException;
 	
 	/**
 	 * @return whether or not setValue has been called (thus {@link CustomDatatype#save(Object, String)} needs to be called

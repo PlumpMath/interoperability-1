@@ -23,9 +23,9 @@ import java.util.TreeSet;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openmrs.api.ReportService;
-import org.openmrs.cohort.CohortDefinition;
-import org.openmrs.report.EvaluationContext;
+//import org.openmrs.api.ReportService;
+//import org.openmrs.cohort.CohortDefinition;
+//import org.openmrs.report.EvaluationContext;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
@@ -54,9 +54,9 @@ public class Cohort extends BaseOpenmrsData implements Serializable {
 	
 	private Set<Integer> memberIds;
 	
-	private CohortDefinition cohortDefinition;
-	
-	private EvaluationContext evaluationContext;
+//	private CohortDefinition cohortDefinition;
+//	
+//	private EvaluationContext evaluationContext;
 	
 	public Cohort() {
 		memberIds = new TreeSet<Integer>();
@@ -320,38 +320,38 @@ public class Cohort extends BaseOpenmrsData implements Serializable {
 	/**
 	 * @return the cohortDefinition
 	 */
-	@Element(required = false)
-	@Deprecated
-	public CohortDefinition getCohortDefinition() {
-		return cohortDefinition;
-	}
+//	@Element(required = false)
+//	@Deprecated
+//	public CohortDefinition getCohortDefinition() {
+//		return cohortDefinition;
+//	}
 	
 	/**
 	 * @param cohortDefinition the cohortDefinition to set
 	 */
-	@Element(required = false)
-	@Deprecated
-	public void setCohortDefinition(CohortDefinition cohortDefinition) {
-		this.cohortDefinition = cohortDefinition;
-	}
+//	@Element(required = false)
+//	@Deprecated
+//	public void setCohortDefinition(CohortDefinition cohortDefinition) {
+//		this.cohortDefinition = cohortDefinition;
+//	}
 	
 	/**
 	 * @return the evaluationContext
 	 */
-	@Element(required = false)
-	@Deprecated
-	public EvaluationContext getEvaluationContext() {
-		return evaluationContext;
-	}
+//	@Element(required = false)
+//	@Deprecated
+//	public EvaluationContext getEvaluationContext() {
+//		return evaluationContext;
+//	}
 	
 	/**
 	 * @param evaluationContext the evaluationContext to set
 	 */
-	@Element(required = false)
-	@Deprecated
-	public void setEvaluationContext(EvaluationContext evaluationContext) {
-		this.evaluationContext = evaluationContext;
-	}
+//	@Element(required = false)
+//	@Deprecated
+//	public void setEvaluationContext(EvaluationContext evaluationContext) {
+//		this.evaluationContext = evaluationContext;
+//	}
 	
 	/**
 	 * @since 1.5

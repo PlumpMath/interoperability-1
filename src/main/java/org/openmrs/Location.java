@@ -18,8 +18,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.openmrs.api.APIException;
-import org.openmrs.api.context.Context;
+//import org.openmrs.api.APIException;
+//import org.openmrs.api.context.Context;
 
 /**
  * A Location is a physical place, such as a hospital, a room, a clinic, or a district. Locations
@@ -255,7 +255,7 @@ public class Location extends BaseCustomizableMetadata<LocationAttribute> implem
 	 */
 	public List<Location> findPossibleValues(String searchText) {
 		try {
-			return Context.getLocationService().getLocations(searchText);
+			return null;//Context.getLocationService().getLocations(searchText);
 		}
 		catch (Exception e) {
 			return Collections.emptyList();
@@ -267,7 +267,7 @@ public class Location extends BaseCustomizableMetadata<LocationAttribute> implem
 	 */
 	public List<Location> getPossibleValues() {
 		try {
-			return Context.getLocationService().getAllLocations();
+			return null;//Context.getLocationService().getAllLocations();
 		}
 		catch (Exception e) {
 			return Collections.emptyList();
@@ -279,7 +279,7 @@ public class Location extends BaseCustomizableMetadata<LocationAttribute> implem
 	 */
 	public Location hydrate(String locationId) {
 		try {
-			return Context.getLocationService().getLocation(Integer.valueOf(locationId));
+			return null;//Context.getLocationService().getLocation(Integer.valueOf(locationId));
 		}
 		catch (Exception e) {
 			return new Location();
@@ -425,7 +425,8 @@ public class Location extends BaseCustomizableMetadata<LocationAttribute> implem
 			childLocations = new HashSet<Location>();
 		
 		if (child.equals(this))
-			throw new APIException("A location cannot be its own child!");
+			throw new RuntimeException();
+//			throw new APIException("A location cannot be its own child!");
 		
 		// Traverse all the way up (down?) to the root, then check whether the child is already
 		// anywhere in the tree
@@ -434,9 +435,10 @@ public class Location extends BaseCustomizableMetadata<LocationAttribute> implem
 			root = root.getParentLocation();
 		
 		if (isInHierarchy(child, root))
-			throw new APIException("Location hierarchy loop detected! You cannot add: '" + child + "' to the parent: '"
-			        + this
-			        + "' because it is in the parent hierarchy somewhere already and a location cannot be its own parent.");
+			throw new RuntimeException();
+//			throw new APIException("Location hierarchy loop detected! You cannot add: '" + child + "' to the parent: '"
+//			        + this
+//			        + "' because it is in the parent hierarchy somewhere already and a location cannot be its own parent.");
 		
 		child.setParentLocation(this);
 		childLocations.add(child);

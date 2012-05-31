@@ -73,10 +73,10 @@ public class Relationship extends BaseOpenmrsData implements java.io.Serializabl
 		target.personA = getPersonA();
 		target.relationshipType = getRelationshipType();
 		target.personB = getPersonB();
-		target.setCreator(getCreator());
+//		target.setCreator(getCreator());
 		target.setDateCreated(getDateCreated());
 		target.setVoided(isVoided());
-		target.setVoidedBy(getVoidedBy());
+//		target.setVoidedBy(getVoidedBy());
 		target.setDateVoided(getDateVoided());
 		target.setVoidReason(getVoidReason());
 		return target;

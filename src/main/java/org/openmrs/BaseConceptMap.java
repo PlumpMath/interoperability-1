@@ -24,9 +24,9 @@ public abstract class BaseConceptMap extends BaseOpenmrsObject implements Audita
 	
 	private ConceptMapType conceptMapType;
 	
-	private User creator;
-	
-	private User changedBy;
+//	private User creator;
+//	
+//	private User changedBy;
 	
 	private Date dateCreated;
 	
@@ -46,33 +46,33 @@ public abstract class BaseConceptMap extends BaseOpenmrsObject implements Audita
 		this.conceptMapType = conceptMapType;
 	}
 	
-	/**
-	 * @return the creator
-	 */
-	public User getCreator() {
-		return creator;
-	}
-	
-	/**
-	 * @param creator the creator to set
-	 */
-	public void setCreator(User creator) {
-		this.creator = creator;
-	}
-	
-	/**
-	 * @return the changedBy
-	 */
-	public User getChangedBy() {
-		return changedBy;
-	}
-	
-	/**
-	 * @param changedBy the changedBy to set
-	 */
-	public void setChangedBy(User changedBy) {
-		this.changedBy = changedBy;
-	}
+//	/**
+//	 * @return the creator
+//	 */
+//	public User getCreator() {
+//		return creator;
+//	}
+//	
+//	/**
+//	 * @param creator the creator to set
+//	 */
+//	public void setCreator(User creator) {
+//		this.creator = creator;
+//	}
+//	
+//	/**
+//	 * @return the changedBy
+//	 */
+//	public User getChangedBy() {
+//		return changedBy;
+//	}
+//	
+//	/**
+//	 * @param changedBy the changedBy to set
+//	 */
+//	public void setChangedBy(User changedBy) {
+//		this.changedBy = changedBy;
+//	}
 	
 	/**
 	 * @return the dateCreated

@@ -97,8 +97,8 @@ public class Obs extends BaseOpenmrsData implements java.io.Serializable {
 	
 	protected String valueComplex;
 	
-	// ComplexData is not persisted in the database.
-	protected transient ComplexData complexData;
+//	// ComplexData is not persisted in the database.
+//	protected transient ComplexData complexData;
 	
 	protected String comment;
 	
@@ -172,7 +172,7 @@ public class Obs extends BaseOpenmrsData implements java.io.Serializable {
 		newObs.setVoidReason(obsToCopy.getVoidReason());
 		
 		newObs.setValueComplex(obsToCopy.getValueComplex());
-		newObs.setComplexData(obsToCopy.getComplexData());
+//		newObs.setComplexData(obsToCopy.getComplexData());
 		
 		// Copy list of all members, including voided, and put them in respective groups
 		if (obsToCopy.hasGroupMembers(true))
@@ -195,10 +195,10 @@ public class Obs extends BaseOpenmrsData implements java.io.Serializable {
 	 * @see OpenmrsObjectSaveHandler
 	 * @deprecated no longer needed. Replaced by handlers.
 	 */
-	@Deprecated
-	public void setRequiredProperties(User creator, Date dateCreated) {
-		RequiredDataAdvice.recursivelyHandle(SaveHandler.class, this, creator, dateCreated, null, null);
-	}
+//	@Deprecated
+//	public void setRequiredProperties(User creator, Date dateCreated) {
+//		RequiredDataAdvice.recursivelyHandle(SaveHandler.class, this, creator, dateCreated, null, null);
+//	}
 	
 	// Property accessors
 	
@@ -305,10 +305,10 @@ public class Obs extends BaseOpenmrsData implements java.io.Serializable {
 	 * @deprecated This method should not be used. The #setObsGroup() method should be used instead
 	 * @see #setObsGroup(Obs)
 	 */
-	public void setObsGroupId(Integer obsGroupId) {
-		throw new APIException("I don't know what to do here because I don't" + "know what the parent is of the group I'm "
-		        + "being put into. This method is deprecated " + "and should not be used.");
-	}
+//	public void setObsGroupId(Integer obsGroupId) {
+//		throw new APIException("I don't know what to do here because I don't" + "know what the parent is of the group I'm "
+//		        + "being put into. This method is deprecated " + "and should not be used.");
+//	}
 	
 	/**
 	 * An obs grouping occurs when the question (#getConcept()) is a set. (@link

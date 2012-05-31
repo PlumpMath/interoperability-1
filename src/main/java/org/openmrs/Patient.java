@@ -22,7 +22,7 @@ import java.util.Vector;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openmrs.api.APIException;
+//import org.openmrs.api.APIException;
 
 /**
  * Defines a Patient in the system. A patient is simply an extension of a person and all that that
@@ -109,23 +109,23 @@ public class Patient extends Person implements java.io.Serializable {
 		this.patientId = personId;
 	}
 	
-	/**
-	 * @return patient's tribe
-	 * @deprecated Tribe is not long a value on Patient. Install the Tribe module
-	 */
-	@Deprecated
-	public Tribe getTribe() {
-		throw new APIException("The Patient.getTribe method is no longer supported.  Install the Tribe module");
-	}
-	
-	/**
-	 * @param tribe patient's tribe
-	 * @deprecated Tribe is not long a value on Patient. Install the Tribe module
-	 */
-	@Deprecated
-	public void setTribe(Tribe tribe) {
-		throw new APIException("The Patient.setTribe(Tribe) method is no longer supported.  Install the Tribe module");
-	}
+//	/**
+//	 * @return patient's tribe
+//	 * @deprecated Tribe is not long a value on Patient. Install the Tribe module
+//	 */
+//	@Deprecated
+//	public Tribe getTribe() {
+//		throw new APIException("The Patient.getTribe method is no longer supported.  Install the Tribe module");
+//	}
+//	
+//	/**
+//	 * @param tribe patient's tribe
+//	 * @deprecated Tribe is not long a value on Patient. Install the Tribe module
+//	 */
+//	@Deprecated
+//	public void setTribe(Tribe tribe) {
+//		throw new APIException("The Patient.setTribe(Tribe) method is no longer supported.  Install the Tribe module");
+//	}
 	
 	/**
 	 * Get all of this patients identifiers -- both voided and non-voided ones. If you want only

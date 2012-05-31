@@ -13,7 +13,7 @@
  */
 package org.openmrs;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -131,9 +131,9 @@ public class Provider extends BaseCustomizableMetadata<ProviderAttribute> {
 	public void setName(String name) {
 		super.setName(name);
 		
-		//Trace message if we are setting a name when already attached to a person.
-		if (getPerson() != null && !StringUtils.isBlank(super.getName())) {
-			log.trace("Setting name for a provider who is already attached to a person");
-		}
+//		//Trace message if we are setting a name when already attached to a person.
+//		if (getPerson() != null && !StringUtils.isBlank(super.getName())) {
+//			log.trace("Setting name for a provider who is already attached to a person");
+//		}
 	}
 }
